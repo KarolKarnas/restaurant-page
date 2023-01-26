@@ -1,2 +1,5 @@
-console.log('hello');
-console.log('hello there');
+import loadWebsite from './website.js';
+
+console.log('hello God');
+
+loadWebsite();
