@@ -14,18 +14,20 @@ function createHeader() {
 	const ulNav = document.createElement('ul');
 
 	const liHome = document.createElement('li');
+	liHome.setAttribute('id','li-home');
 	const aHome = document.createElement('a');
-	aHome.setAttribute('href', '#home');
 	aHome.textContent = 'Home';
 
 	const liMenu = document.createElement('li');
 	const aMenu = document.createElement('a');
-	aMenu.setAttribute('href', '#menu');
+	liMenu.setAttribute('id', 'li-menu');
+	// aMenu.setAttribute('href', '#menu');
 	aMenu.textContent = 'Menu';
 
 	const liContact = document.createElement('li');
 	const aContact = document.createElement('a');
-	aContact.setAttribute('href', '#contact');
+	// aContact.setAttribute('href', '#contact');
+	liContact.setAttribute('id', 'li-contact');
 	aContact.textContent = 'Contact';
 
 	contentContainer.appendChild(header);
@@ -77,12 +79,7 @@ function createMain() {
 // 	sectionHome.appendChild(homeDescription);
 // }
 
-// function clearMain() {
-// 	const mainChildren = main.childNodes;
-// 	console.log(mainChildren);
-// 	mainChildren.forEach(el => { el.remove()
-// 	});
-// }
+
 
 function createFooter() {
 	const footer = document.createElement('footer');

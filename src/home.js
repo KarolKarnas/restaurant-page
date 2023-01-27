@@ -1,6 +1,8 @@
 function createHome() {
+// const main = document.getElementById('main');
+
 	const sectionHome = document.createElement('section');
-	sectionHome.setAttribute('id', 'home');
+	// sectionHome.setAttribute('id', 'home');
 	main.appendChild(sectionHome);
 
 	const headingContainer = document.createElement('div');
