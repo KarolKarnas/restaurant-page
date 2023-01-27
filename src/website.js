@@ -16,6 +16,7 @@ function createHeader() {
 	const liHome = document.createElement('li');
 	liHome.setAttribute('id','li-home');
 	const aHome = document.createElement('a');
+	aHome.classList.add('tab-active');
 	aHome.textContent = 'Home';
 
 	const liMenu = document.createElement('li');
