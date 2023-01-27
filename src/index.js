@@ -1,13 +1,15 @@
 import loadWebsite from './website.js';
 import createHome from './home.js';
 import createMenu from './menu.js';
+import createContact from './contact.js';
 
 console.log('hello God');
 
+// ON PAGE LOAD
 loadWebsite();
-// createHome()
-createMenu();
+createHome()
 
+// ON NAV CLICK
 function clearMain() {
 	const mainChildren = main.childNodes;
 	mainChildren.forEach((el) => {
@@ -20,15 +22,15 @@ function removeActiveTabBold() {
 	allLi.forEach((el) => el.classList.remove('tab-active'));
 }
 
-function classToggle (e) {
- e.classList.add('tab-active');
+function classToggle(e) {
+	e.classList.add('tab-active');
 }
 
 const liHome = document.getElementById('li-home');
 liHome.addEventListener('click', (e) => {
 	clearMain();
 	createHome();
-    removeActiveTabBold()
+	removeActiveTabBold();
 	classToggle(e.target);
 });
 
@@ -36,6 +38,14 @@ const liMenu = document.getElementById('li-menu');
 liMenu.addEventListener('click', (e) => {
 	clearMain();
 	createMenu();
-    removeActiveTabBold()
-    classToggle(e.target);
+	removeActiveTabBold();
+	classToggle(e.target);
+});
+
+const liContact = document.getElementById('li-contact');
+liContact.addEventListener('click', (e) => {
+	clearMain();
+	createContact();
+	removeActiveTabBold();
+	classToggle(e.target);
 });

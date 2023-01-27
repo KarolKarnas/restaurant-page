@@ -4,45 +4,44 @@ let main;
 function createHeader() {
 	const header = document.createElement('header');
 	header.classList.add('header');
+	contentContainer.appendChild(header);
 
 	const nav = document.createElement('nav');
+	header.appendChild(nav);
 
 	const logo = document.createElement('img');
 	logo.setAttribute('src', 'img/logo-3.png');
 	logo.classList.add('logo');
+	nav.appendChild(logo);
 
 	const ulNav = document.createElement('ul');
+	nav.appendChild(ulNav);
 
 	const liHome = document.createElement('li');
-	liHome.setAttribute('id','li-home');
+	liHome.setAttribute('id', 'li-home');
+	ulNav.appendChild(liHome);
+
 	const aHome = document.createElement('a');
 	aHome.classList.add('tab-active');
 	aHome.textContent = 'Home';
-
-	const liMenu = document.createElement('li');
-	const aMenu = document.createElement('a');
-	liMenu.setAttribute('id', 'li-menu');
-	// aMenu.setAttribute('href', '#menu');
-	aMenu.textContent = 'Menu';
-
-	const liContact = document.createElement('li');
-	const aContact = document.createElement('a');
-	// aContact.setAttribute('href', '#contact');
-	liContact.setAttribute('id', 'li-contact');
-	aContact.textContent = 'Contact';
-
-	contentContainer.appendChild(header);
-	header.appendChild(nav);
-	nav.appendChild(logo);
-	nav.appendChild(ulNav);
-
-	ulNav.appendChild(liHome);
 	liHome.appendChild(aHome);
 
+	const liMenu = document.createElement('li');
+	liMenu.setAttribute('id', 'li-menu');
 	ulNav.appendChild(liMenu);
+
+	const aMenu = document.createElement('a');
+	// aMenu.setAttribute('href', '#menu');
+	aMenu.textContent = 'Menu';
 	liMenu.appendChild(aMenu);
 
+	const liContact = document.createElement('li');
+	liContact.setAttribute('id', 'li-contact');
 	ulNav.appendChild(liContact);
+
+	const aContact = document.createElement('a');
+	// aContact.setAttribute('href', '#contact');
+	aContact.textContent = 'Contact';
 	liContact.appendChild(aContact);
 }
 
@@ -52,41 +51,12 @@ function createMain() {
 	contentContainer.appendChild(main);
 }
 
-// function createHome() {
-// 	const sectionHome = document.createElement('section');
-// 	sectionHome.setAttribute('id', 'home');
-// 	main.appendChild(sectionHome);
-
-// 	const headingContainer = document.createElement('div');
-// 	headingContainer.classList.add('heading');
-// 	sectionHome.appendChild(headingContainer);
-
-// 	const headingName = document.createElement('h1');
-// 	headingName.textContent = 'Steak House';
-// 	headingContainer.appendChild(headingName);
-
-// 	const headingTagLine = document.createElement('p');
-// 	headingTagLine.textContent = 'Best in Town';
-// 	headingContainer.appendChild(headingTagLine);
-
-// 	const homeImg = document.createElement('img');
-// 	homeImg.setAttribute('src', './img/home-1.jpg');
-// 	sectionHome.appendChild(homeImg);
-
-// 	const homeDescription = document.createElement('p');
-// 	homeDescription.classList.add('description');
-// 	homeDescription.textContent =
-// 		'Welcome to the Stake House, where we serve the best steaks in town. Our menu features a wide variety of mouth-watering cuts, cooked to perfection and seasoned with the finest spices. Come dine with us and enjoy a cozy atmosphere and excellent service. Whether you\'re in the mood for a classic T-bone or a juicy ribeye, we\'ve got you covered. Don\'t believe us? Try it out for yourself and see why we\'re the go-to spot for steak lovers. Book your table today!';
-// 	sectionHome.appendChild(homeDescription);
-// }
-
-
-
 function createFooter() {
 	const footer = document.createElement('footer');
 	contentContainer.appendChild(footer);
 
 	const footerAuthor = document.createElement('p');
+	footerAuthor.classList.add('author');
 	footerAuthor.textContent = 'Made with code Karol Karnas 2023';
 	footer.appendChild(footerAuthor);
 
@@ -95,7 +65,7 @@ function createFooter() {
 	footer.appendChild(copyContainer);
 
 	const copyLogo = document.createElement('a');
-	copyLogo.textContent = 'Logo designed by macrovector / Freepik';
+	copyLogo.textContent = 'Logo designed by macrovector';
 	copyLogo.setAttribute('href', 'http://www.freepik.com');
 	copyContainer.appendChild(copyLogo);
 
@@ -106,13 +76,27 @@ function createFooter() {
 		'https://www.freepik.com/free-photo/master-chef-wearing-uniform-cooking-delicious-beef-steak-kitchen-restaurant_30806468.htm#page=3&query=steak%20house&position=9&from_view=search&track=sph'
 	);
 	copyContainer.appendChild(copyImageHome);
+
+	const copyImgMenu = document.createElement('a');
+	copyImgMenu.textContent = 'Image by KamranAydinov';
+	copyImgMenu.setAttribute(
+		'href',
+		'https://www.freepik.com/free-photo/grilled-t-bone-steak-served-with-salt-herbs-grilled-cherry-tomatoes_7268936.htm#query=tbone&position=1&from_view=search&track=sph'
+	);
+	copyContainer.appendChild(copyImgMenu);
+
+	const copyImgContact = document.createElement('a');
+	copyImgContact.textContent = 'Image by Freepik';
+	copyImgContact.setAttribute(
+		'href',
+		'https://www.freepik.com/free-photo/top-view-map-blue-background_11512903.htm#query=location&position=8&from_view=search&track=sph'
+	);
+	copyContainer.appendChild(copyImgContact);
 }
 
 function loadWebsite() {
 	createHeader();
 	createMain();
-	// createHome();
-	// clearMain()
 	createFooter();
 }
 

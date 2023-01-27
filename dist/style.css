@@ -149,7 +149,7 @@ footer {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--burnished-brown);
-	height: 50px;
+	height: 75px;
 	/* border-top: 1px solid var(--middle-red); */
 }
 
@@ -187,4 +187,22 @@ li a:hover {
 
 .menu-img-margin {
 	margin-top: 2rem;
+}
+
+.section-contact span {
+	font-weight: bold;
+}
+
+.contact-details {
+	margin-bottom: 1rem;
+}
+
+footer a {
+	margin-right: 1rem;
+}
+
+.author {
+	font-size: 1.1rem;
+	/* font-weight: bold; */
+	margin-bottom: 0.5rem;
 }
