@@ -1,13 +1,13 @@
-import loadWebsite from './website.js';
-import createHome from './home.js';
-import createMenu from './menu.js';
-import createContact from './contact.js';
+import loadWebsite from './website';
+import createHome from './home';
+import createMenu from './menu';
+import createContact from './contact';
 
-console.log('hello God');
+// console.log('hello God');
 
 // ON PAGE LOAD
 loadWebsite();
-createHome()
+createHome();
 
 // ON NAV CLICK
 function clearMain() {
